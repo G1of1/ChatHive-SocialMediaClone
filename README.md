@@ -9,3 +9,5 @@ Technologies Used:
 - React.js
 - Node.js
 - Cloudinary
+- Tailwind CSS
+- Daisy UI
