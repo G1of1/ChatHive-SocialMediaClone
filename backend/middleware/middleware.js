@@ -1,7 +1,7 @@
 import { User } from '../models/user.js';
 import jwt from "jsonwebtoken";
 
-
+//MiddleWare that is used for components and pages that require authentication
 export const middleWare = async (req, res, next) => {
     try {
         //Gets the token from the cookies

@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-
+//For for updating profile
 export const useUpdatedProfile = () => {
     const queryClient = useQueryClient();
     const {mutateAsync: updateProfile, isPending: isUpdating} = useMutation({

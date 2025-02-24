@@ -1,3 +1,4 @@
+//Used as sample hard coded data
 export const POSTS = [
 	{
 		_id: "1",

@@ -2,6 +2,7 @@
 import Notification  from '../models/notification.js';
 
 export const getNotifications = async (req, res) => {
+    //Retrives the notifications through the user's ID
     const userID = req.user._id;
     try {
         const notifications = await Notification.find({ to: userID}).populate({
@@ -18,6 +19,7 @@ export const getNotifications = async (req, res) => {
 }
 
 export const deleteNotifications = async (req, res) => {
+    // To delete all notifications
     try {
         const userID = req.user._id;
         await Notification.deleteMany({to: userID});
@@ -29,6 +31,7 @@ export const deleteNotifications = async (req, res) => {
 }
 
 export const deleteNotification = async (req, res) => {
+    //For the deletion of just one notificaiton(plan to include the implementation for this feature)
     try {
         const { id } = req.params;
         const userID = req.user._id;

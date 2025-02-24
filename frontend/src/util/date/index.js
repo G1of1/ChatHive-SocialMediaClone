@@ -1,3 +1,4 @@
+//Logic for the dates
 export const formatPostDate = (date) => {
     const currentDate = new Date();
     const postDate = new Date(date);

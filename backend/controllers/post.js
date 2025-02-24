@@ -4,6 +4,7 @@ import { User } from '../models/user.js';
 import Notification from '../models/notification.js';
 
 export const createPost = async (req, res) => {
+    //Creates a post from the text and img(plan to include videos in the future)
     try {
         const { text } = req.body;
         let { img } = req.body;
@@ -33,6 +34,7 @@ export const createPost = async (req, res) => {
     }
 }
 export const deletePost = async (req, res) => {
+    //Deleting post through the post ID
     try {
         const post = await Post.findById(req.params.id);
         if(!post) {
@@ -55,6 +57,7 @@ export const deletePost = async (req, res) => {
     }
 }
 export const likeUnlikePost = async (req, res) => {
+    //Liking/Unliking through the post ID
     try {
         
         const { id } = req.params;
@@ -94,6 +97,7 @@ export const likeUnlikePost = async (req, res) => {
     
 }
 export const saveUnSavePost = async (req, res) => {
+    //Saving/Unsaving thorugh the post ID
     const { id: postID } = req.params;
     const userID = req.user._id;
     try {

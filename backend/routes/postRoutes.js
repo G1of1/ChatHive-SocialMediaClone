@@ -3,7 +3,7 @@ import { middleWare } from '../middleware/middleware.js';
 
 import { createPost, deletePost, commentOnPost, likeUnlikePost, getAllPosts, getLikedPosts, getFollowingPosts, getUserPosts, deleteComment, getSavedPosts, saveUnSavePost } from '../controllers/post.js';
 
-
+//Post routes
 const router = express.Router();
 //Get post for to display in the home page
 router.get('/forYou', middleWare, getAllPosts);
