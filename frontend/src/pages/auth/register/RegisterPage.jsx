@@ -37,7 +37,6 @@ const RegisterPage = () => {
             if(data.error) {
                 throw new Error(data.error);
             }
-            console.log(data);
             return data;
         }
         catch(error) {
